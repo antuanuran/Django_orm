@@ -1,11 +1,18 @@
-{% extends "base.html" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Распродажа телефонов</title>
 
-{% load static %}
+</head>
 
-{% block title %}{{ phone.name }}{% endblock %}
+<body>
 
-{% block content %}
-  <div class="container">
+<h1 style="color: Teal">Модель</h1>
+
+<!--*********************** КНОПКИ **************************-->
+
+<div class="container">
   <div class="header">
     <h5>
       <a href="{% url 'catalog' %}">Вернуться в каталог</a>
@@ -19,4 +26,9 @@
     <div>Дата выпуска: {{ phone.release_date }}</div>
     <div>LTE: {{ phone.lte_exists|yesno:'есть,нет' }}</div>
   </div>
-{% endblock %}
+
+
+
+
+</body>
+</html>
